@@ -12,6 +12,6 @@ def log_config():
     ch.setFormatter(formatter)
     root.addHandler(ch)
 
-    fh = logging.FileHandler('sensorflare_codesend.log')
+    fh = logging.FileHandler('/var/log/sensorflare-codesend.log')
     fh.setFormatter(formatter)
     root.addHandler(fh)

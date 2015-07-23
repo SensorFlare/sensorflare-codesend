@@ -51,7 +51,7 @@ def create_connection(host, credentials):
 	import subprocess
 	subprocess.call(["codesend", body])
         logging.info(' [c] codesend:' + body)
-
+        rabbitSend(body)
     # set the consume callback
     channel.basic_consume(callback, queue=commands_queue, no_ack=True)
 
